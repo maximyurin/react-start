@@ -1,6 +1,11 @@
+import Counter from "./Counter";
+
 function PersonContactInfo() {
   return (
     <div className="person-contact-info">
+      <section>
+        <Counter />
+      </section>
       <header>
         <h3 className="person-header">Contact</h3>
       </header>
