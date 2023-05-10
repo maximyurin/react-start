@@ -1,29 +1,42 @@
+import { useState } from "react";
+import PersonWorkPlaces from "./Person-Work-Places";
+
 function PersonWorkExperience() {
+  const [workplaces, setWorkplaces] = useState([
+    {
+      title: "Retail Sales Manager",
+      description:
+        "Ceramic porcelain retail\n" +
+        "          sales, working with developers and builders.",
+      name: "ITUM LLC",
+      datesOfWork: "09/2021 - present",
+      link: "https://www.itum.ua",
+    },
+    {
+      title: "Retail Sales Manager",
+      description:
+        "Interior and entrance doors\n" +
+        "          and door furniture retail sales.",
+      name: "Epicentr K",
+      datesOfWork: "08/2016 - 09/2021",
+      link: "https://www.epicentrk.ua",
+    },
+  ]);
+
+  // const addWorkplace = (newWorkplace) => {
+  //   setWorkplaces([...workplaces, newWorkplace]);
+  // };
+
   return (
     <div className="person-work-experience">
       <header>
         <h2 className="person-header">Work Experience</h2>
       </header>
-      <section>
-        <p className="person-content-p">
-          <strong>Name of employer:</strong> ITUM, Kiev
-          <br />
-          <strong>Dates of employment:</strong> 09/2021 - present
-          <br />
-          <strong>Job title:</strong> Retail Sales Manager
-          <br />
-          <strong>Project/Role description:</strong> Ceramic porcelain retail
-          sales, working with developers and builders.
-        </p>
-        <p className="person-content-past">
-          <strong>Name of employer:</strong> Epicentr K, Kiev
-          <br />
-          <strong>Dates of employment:</strong> 10/2015 - 09/2021 <br />
-          <strong>Job title:</strong> Retail Sales Manager <br />
-          <strong>Project/Role description:</strong> Interior and entrance doors
-          and door furniture retail sales.
-        </p>
-      </section>
+      {workplaces.map((workplace, index) => (
+        <section key={index}>
+          <PersonWorkPlaces {...workplace} />
+        </section>
+      ))}
     </div>
   );
 }
