@@ -1,9 +1,9 @@
-function PersonWorkPlaces({ title, description, name, datesOfWork, link }) {
+function PersonWorkPlaces({ title, description, name, yearsOfWork, link }) {
   return (
     <p className="person-content-p">
       <strong>Name of employer:</strong> {name}
       <br />
-      <strong>Dates of employment:</strong> {datesOfWork}
+      <strong>Dates of employment:</strong> {yearsOfWork}
       <br />
       <strong>Job title:</strong> {title}
       <br />
