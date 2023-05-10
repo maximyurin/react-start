@@ -584,6 +584,9 @@ input:focus, select:focus, textarea:focus {
 .resume-form .counter-btn {
   margin-top: 20px;
 }
+.person-repository {
+  margin-top: 60px;
+}
 /* Animation keyframes */
 /*@keyframes person {*/
 /*  0% {*/

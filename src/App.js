@@ -9,6 +9,7 @@ import PersonSkills from "./components/Person-Skills";
 import PersonWorkExperience from "./components/Person-Work-Experience";
 import PersonEducation from "./components/Person-Education";
 import PersonFormLink from "./components/Person-Form-Link";
+import PersonRepositories from "./components/Person-Repositories";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <div className="person-content">
         <PersonSummary />
         <PersonSkills />
+        <PersonRepositories />
         <PersonWorkExperience />
         <PersonEducation />
         <PersonFormLink />
