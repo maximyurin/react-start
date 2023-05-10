@@ -552,6 +552,38 @@ input:focus, select:focus, textarea:focus {
   background-color: var(--button-hover-color);
   transition: 300ms ease all;
 }
+
+.resume-form {
+  margin-top: 40px;
+  width: 50%;
+}
+.resume-form h4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+.form-container label {
+  margin-right: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-container textarea {
+  width: 100%;
+  resize: none;
+}
+
+.form-container input {
+  padding: 5px 8px;
+  width: 97%;
+}
+.resume-form .counter-btn {
+  margin-top: 20px;
+}
 /* Animation keyframes */
 /*@keyframes person {*/
 /*  0% {*/

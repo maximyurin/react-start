@@ -1,42 +1,40 @@
 import { useState } from "react";
 import PersonWorkPlaces from "./Person-Work-Places";
+import NewWorkPlace from "./NewWorkPlace";
 
 function PersonWorkExperience() {
-  const [workplaces, setWorkplaces] = useState([
+  const [workplaces, setWorkPlace] = useState([
     {
       title: "Retail Sales Manager",
       description:
-        "Ceramic porcelain retail\n" +
-        "          sales, working with developers and builders.",
-      name: "ITUM LLC",
-      datesOfWork: "09/2021 - present",
-      link: "https://www.itum.ua",
+        "Interior and entrance doors and door furniture retail sales.",
+      name: "Epicentr K",
+      yearsOfWork: "10/2015 - 09/2021",
+      link: "www.epicentrk.ua",
     },
     {
       title: "Retail Sales Manager",
       description:
-        "Interior and entrance doors\n" +
-        "          and door furniture retail sales.",
-      name: "Epicentr K",
-      datesOfWork: "08/2016 - 09/2021",
-      link: "https://www.epicentrk.ua",
+        "Ceramic porcelain retail sales, working with developers and builders.",
+      name: "ITUM LLC",
+      yearsOfWork: "09/2021 - present",
+      link: "www.itum.ua",
     },
   ]);
-
-  // const addWorkplace = (newWorkplace) => {
-  //   setWorkplaces([...workplaces, newWorkplace]);
-  // };
-
+  const addNewWorkplace = (newWorkplace) => {
+    setWorkPlace([...workplaces, newWorkplace]);
+  };
   return (
     <div className="person-work-experience">
       <header>
         <h2 className="person-header">Work Experience</h2>
       </header>
-      {workplaces.map((workplace, index) => (
+      {workplaces.reverse().map((work, index) => (
         <section key={index}>
-          <PersonWorkPlaces {...workplace} />
+          <PersonWorkPlaces {...work} />
         </section>
       ))}
+      <NewWorkPlace onAdd={addNewWorkplace} />
     </div>
   );
 }
